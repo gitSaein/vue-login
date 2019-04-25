@@ -12,7 +12,7 @@
               <v-card-text>
                 <v-alert v-model="isLoginError" variant="danger" >등록되지 않은 아이디거나, 아이디 또는 비밀번호를 잘못 입력 하셨습니다. </v-alert>
                 <br>
-                <form @submit="login({email:email, password:password})">
+                <form @submit.prevent="login({email:email, password:password})">
                   <v-text-field name="email" v-model="email" prepend-icon="person" label="Email"></v-text-field>
                   <v-text-field name="password" v-model="password" prepend-icon="lock" label="Password" type="password"></v-text-field>
                   <v-spacer></v-spacer>
