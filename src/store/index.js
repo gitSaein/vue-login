@@ -5,6 +5,7 @@ import actions from './actions'
 import getters from './getters'
 import mutations from './mutations'
 import state from './state'
+import login from './modules/login/index'
 
 import createPersistedState from 'vuex-persistedstate'
 
@@ -14,7 +15,10 @@ const store = new Vuex.Store({
       state,
       actions,
       getters,
-      mutations
+      mutations,
+      modules: {
+        login
+      }
 })
 
 export default store

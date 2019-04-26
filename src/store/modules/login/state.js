@@ -5,5 +5,6 @@ export default {
       ],
       isLogin: false,
       isLoginError: false,
-      userInfo: null
+      userInfo: null,
+      alert
 }

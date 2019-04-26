@@ -37,11 +37,11 @@ router.beforeEach((to, from, next) => {
     document.body.classList.add('app-loading')
   
     if (to.path !== '/login') {
-      if (store.state.isLogin !== true) {
+      if (store.state.login.isLogin !== true) {
         alert('로그인이 필요합니다.')
         next('/login')
       }
-    } else if ( to.path === '/login' && store.state.isLogin === true ) {
+    } else if ( to.path === '/login' && store.state.login.isLogin === true ) {
         alert('이미 로그인 되었습니다.')
         next('/page/table')
     }

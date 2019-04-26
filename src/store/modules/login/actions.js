@@ -10,7 +10,7 @@ export default {
           commit('loginError')
         } else {
           commit('loginSuccess', selectedUser)
-          router.push({ name: 'main' })
+          router.push({ name: 'table' })
         }
     },
     logout ({ commit }) {
