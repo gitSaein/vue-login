@@ -10,6 +10,9 @@ export default {
           commit('loginError')
         } else {
           commit('loginSuccess', selectedUser)
+          setTimeout(() => {
+            commit('logout')
+          }, 1000*60*60*4);
           router.push({ name: 'table' })
         }
     },
